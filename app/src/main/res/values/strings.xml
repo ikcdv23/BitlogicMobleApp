@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Punto Games</string>
+    <string name="welcome_title">¡Bienvenido a\nPunto Games!</string>
+    <string name="registered_button">Ya estoy registrado</string>
+    <string name="new_user_button">Soy nuevo</string>
+    <string name="login_title">Tu próxima partida\nempieza aquí.</string>
+    <string name="login_description">Introduce tus datos para entrar en Punto Games.</string>
+    <string name="email_label">Correo electrónico</string>
+    <string name="email_hint">tu@correo.com</string>
+    <string name="password_label">Contraseña</string>
+    <string name="password_hint">Escribe tu contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="back_welcome">Volver a la bienvenida</string>
+    <string name="search_hint">Buscar un juego o cartas…</string>
+    <string name="product_magic">Magic: The Gathering</string>
+    <string name="product_pokemon">Pokémon</string>
+    <string name="product_monopoly">Monopoly</string>
+    <string name="product_price">5,99 €</string>
+    <string name="dice_icon_description">Icono de dado de Punto Games</string>
+    <string name="welcome_image_description">Dados, cartas y fichas de juegos de mesa</string>
+    <string name="magic_image_description">Sobre de cartas Magic: The Gathering</string>
+    <string name="pokemon_image_description">Sobre de cartas Pokémon</string>
+    <string name="monopoly_image_description">Juego de mesa Monopoly</string>
+</resources>

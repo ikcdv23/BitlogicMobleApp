@@ -1,0 +1,112 @@
+  <?xml version="1.0" encoding="utf-8"?>
+  <androidx.constraintlayout.widget.ConstraintLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/main"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/neutral_background">
+
+      <LinearLayout
+          android:id="@+id/brand_header"
+          android:layout_width="wrap_content"
+          android:layout_height="42dp"
+          android:layout_marginStart="12dp"
+          android:layout_marginTop="19dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <FrameLayout
+              android:layout_width="42dp"
+              android:layout_height="42dp"
+              android:background="@drawable/bg_logo">
+
+              <ImageView
+                  android:layout_width="26dp"
+                  android:layout_height="26dp"
+                  android:layout_gravity="center"
+                  android:contentDescription="@string/dice_icon_description"
+                android:src="@drawable/ic_dice" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/lexend"
+            android:text="@string/app_name"
+            android:textColor="@color/text_primary"
+            android:textSize="23sp" />
+    </LinearLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_welcome"
+        android:layout_width="254dp"
+        android:layout_height="254dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/welcome_image_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome_games"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brand_header"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.PuntoGames.WelcomeImage" />
+
+    <TextView
+        android:id="@+id/txt_welcome_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/lexend"
+        android:text="@string/welcome_title"
+        android:textColor="@color/text_primary"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_welcome" />
+
+    <Button
+        android:id="@+id/btn_registered"
+        android:layout_width="300dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_button_primary"
+        android:drawableEnd="@drawable/ic_arrow_right"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/inter"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:stateListAnimator="@null"
+        android:text="@string/registered_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_welcome_title" />
+
+    <Button
+        android:id="@+id/btn_new_user"
+        android:layout_width="300dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_button_secondary"
+        android:fontFamily="@font/inter"
+        android:stateListAnimator="@null"
+        android:text="@string/new_user_button"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_purple"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_registered" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

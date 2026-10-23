@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_purple">#6D3DF2</color>
+    <color name="neutral_background">#FFEECC</color>
+    <color name="neutral_surface">#F4F1FA</color>
+    <color name="accent_yellow">#FFE08A</color>
+    <color name="text_primary">#1F1B2D</color>
+    <color name="text_secondary">#6B6780</color>
+    <color name="input_border">#DED8EB</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>
