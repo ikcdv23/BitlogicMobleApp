@@ -7,39 +7,39 @@
     android:layout_height="match_parent"
     android:background="@color/neutral_background">
 
-    <LinearLayout
-        android:id="@+id/catalog_brand_header"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="19dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <FrameLayout
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:background="@drawable/bg_logo">
-
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_gravity="center"
-                android:contentDescription="@string/dice_icon_description"
-                android:src="@drawable/ic_dice" />
-        </FrameLayout>
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/catalog_brand_header"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:layout_marginStart="12dp"
-            android:fontFamily="@font/lexend"
-            android:text="@string/app_name"
-            android:textColor="@color/text_primary"
-            android:textSize="23sp" />
-    </LinearLayout>
+            android:layout_marginTop="19dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_logo">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/dice_icon_description"
+                    android:src="@drawable/ic_dice" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/lexend"
+                android:text="@string/app_name"
+                android:textColor="@color/text_primary"
+                android:textSize="23sp" />
+        </LinearLayout>
 
     <EditText
         android:id="@+id/input_search"
@@ -64,23 +64,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/catalog_brand_header" />
 
-    <ScrollView
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
         android:clipToPadding="false"
-        android:fillViewport="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
         android:paddingBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_search">
-
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@id/input_search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "Catan",
+    "categoria": "Juegos de mesa",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "Carcassonne",
+    "categoria": "Juegos de mesa",
+    "stock": 8
+  },
+  {
+    "id": 3,
+    "nombre": "Dixit",
+    "categoria": "Juegos de mesa",
+    "stock": 6
+  },
+  {
+    "id": 4,
+    "nombre": "Ticket to Ride: Europa",
+    "categoria": "Juegos de mesa",
+    "stock": 5
+  },
+  {
+    "id": 5,
+    "nombre": "Wingspan",
+    "categoria": "Juegos de mesa",
+    "stock": 4
+  },
+  {
+    "id": 6,
+    "nombre": "Pandemic",
+    "categoria": "Juegos de mesa",
+    "stock": 7
+  },
+  {
+    "id": 7,
+    "nombre": "Magic: The Gathering - Kit de inicio",
+    "categoria": "Magic: The Gathering",
+    "stock": 12
+  },
+  {
+    "id": 8,
+    "nombre": "Magic: The Gathering - Mazo Commander",
+    "categoria": "Magic: The Gathering",
+    "stock": 6
+  },
+  {
+    "id": 9,
+    "nombre": "Magic: The Gathering - Play Booster",
+    "categoria": "Magic: The Gathering",
+    "stock": 36
+  },
+  {
+    "id": 10,
+    "nombre": "Fundas Planeswalker",
+    "categoria": "Accesorios",
+    "stock": 20
+  },
+  {
+    "id": 11,
+    "nombre": "Pokémon TCG - Caja de entrenador élite",
+    "categoria": "Pokémon TCG",
+    "stock": 9
+  },
+  {
+    "id": 12,
+    "nombre": "Pokémon TCG - Sobre de expansión",
+    "categoria": "Pokémon TCG",
+    "stock": 40
+  },
+  {
+    "id": 13,
+    "nombre": "Pokémon TCG - Academia de Combate",
+    "categoria": "Pokémon TCG",
+    "stock": 7
+  },
+  {
+    "id": 14,
+    "nombre": "Álbum para cartas Pokémon",
+    "categoria": "Accesorios",
+    "stock": 18
+  },
+  {
+    "id": 15,
+    "nombre": "Dungeons & Dragons - Manual del jugador",
+    "categoria": "Juegos de rol",
+    "stock": 5
+  },
+  {
+    "id": 16,
+    "nombre": "Set de dados de rol",
+    "categoria": "Juegos de rol",
+    "stock": 15
+  },
+  {
+    "id": 17,
+    "nombre": "Figura coleccionable de Pikachu",
+    "categoria": "Merchandising geek",
+    "stock": 8
+  },
+  {
+    "id": 18,
+    "nombre": "Figura coleccionable de Grogu",
+    "categoria": "Merchandising geek",
+    "stock": 6
+  },
+  {
+    "id": 19,
+    "nombre": "Tapete gaming XXL",
+    "categoria": "Accesorios",
+    "stock": 11
+  },
+  {
+    "id": 20,
+    "nombre": "Torre de dados de madera",
+    "categoria": "Accesorios",
+    "stock": 4
+  }
+]

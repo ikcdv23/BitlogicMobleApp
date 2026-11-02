@@ -21,4 +21,9 @@
     <string name="magic_image_description">Sobre de cartas Magic: The Gathering</string>
     <string name="pokemon_image_description">Sobre de cartas Pokémon</string>
     <string name="monopoly_image_description">Juego de mesa Monopoly</string>
+    <string name="article_image_description">Icono del artículo</string>
+    <string name="article_id_format">#%1$d</string>
+    <string name="stock_format">Stock: %1$d</string>
+    <string name="catalog_load_error">No se pudo cargar el catálogo.</string>
+    <string name="back_catalog">Volver</string>
 </resources>

@@ -34,6 +34,9 @@ android {
 }
 
 dependencies {
+    // Jackson: convierte el JSON local en objetos Articulo y viceversa.
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.17.1")
+
     implementation(libs.activity.ktx)
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
