@@ -1,7 +1,8 @@
 package com.example.bitlogicmobleapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,26 +11,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.bitlogicmobleapp.adapters.ArticuloAdapter;
-import com.example.bitlogicmobleapp.models.Articulo;
-
-import java.util.ArrayList;
-
-/*
- * TODO Próximos pasos:
- * 1. Hacer que esta clase sea una Activity, igual que CatalogActivity.
- * 2. Revisar el import que falta para recibir el estado de la pantalla.
- * 3. Comprobar el nombre exacto del método que Android llama al crear una Activity.
- * 4. Cargar el XML de detalle del artículo, no el XML del inicio de sesión.
- * 5. Usar el ID raíz declarado en activity_article.xml.
- * 6. Registrar esta pantalla en AndroidManifest.xml.
- * 7. Recibir el artículo seleccionado, buscar las vistas por su ID y mostrar sus datos.
- * 8. Hacer que el botón de volver cierre esta pantalla con finish().
- */
 public class ArticleActivity extends AppCompatActivity {
 
-
-    private static final String TAG = "CatalogActivity";
+    public static final String EXTRA_ID = "articulo_id";
+    public static final String EXTRA_NOMBRE = "articulo_nombre";
+    public static final String EXTRA_CATEGORIA = "articulo_categoria";
+    public static final String EXTRA_STOCK = "articulo_stock";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +24,38 @@ public class ArticleActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_article);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.article_detail_root), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        cargarArticulo();
+
         TextView volver = findViewById(R.id.btn_back_article);
-
         volver.setOnClickListener(v -> finish());
-
     }
 
+    /** Recibe los datos enviados por el catálogo y los muestra en el XML. */
     private void cargarArticulo() {
+        Intent intent = getIntent();
+        int id = intent.getIntExtra(EXTRA_ID, -1);
+        String nombre = intent.getStringExtra(EXTRA_NOMBRE);
+        String categoria = intent.getStringExtra(EXTRA_CATEGORIA);
+        int stock = intent.getIntExtra(EXTRA_STOCK, 0);
 
+        TextView vistaNombre = findViewById(R.id.txt_article_name);
+        TextView vistaCategoria = findViewById(R.id.txt_article_category);
+        TextView vistaStock = findViewById(R.id.txt_article_stock);
+        TextView vistaId = findViewById(R.id.txt_article_id);
+        ImageView vistaImagen = findViewById(R.id.img_article_detail);
+
+        vistaNombre.setText(nombre);
+        vistaCategoria.setText(categoria);
+        vistaStock.setText(getString(R.string.stock_format, stock));
+        vistaId.setText(getString(R.string.article_id_format, id));
+
+        // El modelo aún no guarda una imagen distinta para cada producto.
+        vistaImagen.setImageResource(R.drawable.ic_dice);
     }
-
 }

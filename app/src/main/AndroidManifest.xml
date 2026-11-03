@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BitlogicMobleApp">
         <activity
+            android:name=".ArticleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".CatalogActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

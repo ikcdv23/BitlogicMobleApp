@@ -1,5 +1,6 @@
 package com.example.bitlogicmobleapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -46,20 +47,11 @@ public class CatalogActivity extends AppCompatActivity {
 
         header.setOnClickListener(v -> finish());
         cargarCatalogo(listaCatalogo, buscador);
-        listaCatalogo.setOnItemClickListener((parent, fila, posicion, idFila) -> {
-            Articulo seleccionado = adapter.getItem(posicion);
-
-            if (seleccionado == null) {
-                return;
-            }
-
-            // TODO: crear el Intent
-            // TODO: introducir los datos del artículo
-            // TODO: abrir ArticleActivity
-        });
     }
 
-    /** Une los datos del JSON con la lista que aparece en pantalla. */
+    /**
+     * Une los datos del JSON con la lista que aparece en pantalla.
+     */
     private void cargarCatalogo(ListView listaCatalogo, EditText buscador) {
         ArticuloJsonRepository repositorio = new ArticuloJsonRepository();
 
@@ -69,13 +61,36 @@ public class CatalogActivity extends AppCompatActivity {
 
             listaCatalogo.setAdapter(adapter);
             configurarBuscador(buscador, articulos, adapter);
+
+            // La posición pulsada corresponde al contenido actual del adapter,
+            // también cuando la lista está filtrada por el buscador.
+            listaCatalogo.setOnItemClickListener((parent, fila, posicion, idFila) -> {
+                Articulo seleccionado = adapter.getItem(posicion);
+
+                if (seleccionado != null) {
+                    abrirDetalle(seleccionado);
+                }
+            });
+
         } catch (IOException e) {
             Log.e(TAG, "No se pudo leer articulos.json", e);
             Toast.makeText(this, R.string.catalog_load_error, Toast.LENGTH_LONG).show();
         }
+   }
+
+    /** Abre la pantalla de detalle y le entrega los datos del artículo. */
+    private void abrirDetalle(Articulo articulo) {
+        Intent intent = new Intent(this, ArticleActivity.class);
+        intent.putExtra(ArticleActivity.EXTRA_ID, articulo.getId());
+        intent.putExtra(ArticleActivity.EXTRA_NOMBRE, articulo.getNombre());
+        intent.putExtra(ArticleActivity.EXTRA_CATEGORIA, articulo.getCategoria());
+        intent.putExtra(ArticleActivity.EXTRA_STOCK, articulo.getStock());
+        startActivity(intent);
     }
 
-    /** Actualiza la lista al escribir un nombre o una categoría. */
+    /**
+     * Actualiza la lista al escribir un nombre o una categoría.
+     */
     private void configurarBuscador(
             EditText buscador,
             List<Articulo> todosLosArticulos,
@@ -113,6 +128,4 @@ public class CatalogActivity extends AppCompatActivity {
             }
         });
     }
-
-    public statis void
 }
