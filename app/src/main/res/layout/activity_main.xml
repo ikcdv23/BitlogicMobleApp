@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@id/img_welcome" />
 
     <Button
-        android:id="@+id/btn_registered"
+        android:id="@+id/btn_enter"
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:layout_marginTop="24dp"
@@ -81,7 +81,7 @@
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:stateListAnimator="@null"
-        android:text="@string/registered_button"
+        android:text="@string/enter_button"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -92,14 +92,14 @@
         app:layout_constraintTop_toBottomOf="@id/txt_welcome_title" />
 
     <Button
-        android:id="@+id/btn_new_user"
+        android:id="@+id/btn_contact"
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/bg_button_secondary"
         android:fontFamily="@font/inter"
         android:stateListAnimator="@null"
-        android:text="@string/new_user_button"
+        android:text="@string/contact_button"
         android:textAllCaps="false"
         android:textColor="@color/primary_purple"
         android:textSize="15sp"
@@ -107,6 +107,6 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_registered" />
+        app:layout_constraintTop_toBottomOf="@id/btn_enter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

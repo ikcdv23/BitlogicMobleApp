@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btnRegistered = findViewById(R.id.btn_registered);
-        Button btnNewUser = findViewById(R.id.btn_new_user);
+        Button btnEnter = findViewById(R.id.btn_enter);
+        Button btnContact = findViewById(R.id.btn_contact);
 
-        btnRegistered.setOnClickListener(v -> openScreen(CatalogActivity.class));
-        btnNewUser.setOnClickListener(v -> openScreen(NewUserActivity.class));
+        btnEnter.setOnClickListener(v -> openScreen(CatalogActivity.class));
+        btnContact.setOnClickListener(v -> openScreen(ContactActivity.class));
     }
 
     private void openScreen(Class<?> destinationActivity) {
